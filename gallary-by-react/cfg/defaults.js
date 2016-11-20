@@ -34,7 +34,7 @@ function getDefaultModules() {
       },
       {
         test: /\.scss/,
-        loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded'
+        loader: 'style-loader!css-loader!autoprefixer-loader?{browsers:["last 2 version"]}sass-loader?outputStyle=expanded'
       },
       {
         test: /\.less/,
@@ -47,7 +47,10 @@ function getDefaultModules() {
       {
         test: /\.(png|jpg|gif|woff|woff2)$/,
         loader: 'url-loader?limit=8192'
-      },
+      },{
+        test: /\.json$/,
+        loader: 'json-loader'
+      }
       {
         test: /\.(mp4|ogg|svg)$/,
         loader: 'file-loader'

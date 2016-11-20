@@ -18,3 +18,6 @@
 
     出现这个bug的原因是react版本更新后React 15.4.0 把 ReactMount.js 移到 react-dom 下了,我用最蠢的方式解决,将react-dom下的lib文件夹下的所有文件都拷贝到
     react下的lib目录
+
+#### Q & A
+1. `const args = require('minimist')(process.argv.slice(2));`中的`require("minimist")`是什么意思,`(process.argv.slice(2)`又是什么意思
